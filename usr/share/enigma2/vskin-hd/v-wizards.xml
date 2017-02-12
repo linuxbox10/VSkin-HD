@@ -1,0 +1,121 @@
+<skin>
+	<!-- Wizzard's -->
+	<screen name="RemoteControlTemplate">
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1026,139" zPosition="10" size="154,500" alphatest="blend" transparent="0" />
+		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
+		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
+		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
+		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
+	</screen>
+	
+	<screen name="WizardTemplate">
+		<panel name="v-template2-nopig" />
+		<widget name="text" position="86,144" size="795,130" foregroundColor="white" backgroundColor="bgDark" font="Regular;22" transparent="1" valign="top" zPosition="1" />
+		<widget name="config" position="86,289" size="790,350" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+		<widget source="list" render="Listbox" position="0,289" size="907,350" scrollbarMode="showNever" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" alphatest="blend" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+                                MultiContentEntryText(pos = (86, 0), size = (907, 50), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
+				"fonts": [gFont("Regular", 26)],
+				"itemHeight": 50
+				}</convert>
+		</widget>
+		<panel name="RemoteControlTemplate" />
+		<ePixmap pixmap="vskin-hd/v-buttons/key_red.png" position="86,668" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="languagetext" position="116,668" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<!-- HelpMenu -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/HelpMenu.py -->
+	<screen name="HelpMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-nopig" />
+		<eLabel text="Help Menu" position="200,50" size="694,54" valign="top" halign="left" font="Regular;44" noWrap="0" transparent="1" foregroundColor="white" backgroundColor="bgMid" />
+		<panel name="RemoteControlTemplate" />
+		<widget name="list" position="86,144" size="795,504" selectionPixmap="v-selectbars/selectbar-42-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="42" font="Regular;26" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" valign="center" zPosition="2" />
+		<widget name="long_key" position="896,668" size="384,40" font="Regular;21" halign="center" foregroundColor="textCol1" backgroundColor="bgMid" transparent="1" />
+	</screen>
+	
+	<!-- StartWizard -->
+	<!--https://github.com/openatv/enigma2/blob/master/lib/python/Screens/StartWizard.py-->
+	<screen name="StartWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- ImageWizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/SoftwareManager/ImageWizard.py -->
+	<screen name="ImageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- DefaultWizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/DefaultWizard.py -->
+	<screen name="DefaultWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- network wizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/NetworkWizard/NetworkWizard.py -->
+	<screen name="NetworkWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="DefaultSatLists" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- ??? -->
+	<screen name="DreamPackageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- not finished -->
+	<!-- InstallWizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/InstallWizard.py -->
+	<screen name="InstallWizardIpkgUpdater" position="center,center" size="600,60" title=" ">
+		<widget source="statusbar" render="Label" position="10,5" zPosition="10" size="e-10,30" halign="center" valign="center" font="Regular;22" transparent="1" />
+		<eLabel backgroundColor="darkgrey" position="0,430" size="560,2" zPosition="1" />
+	</screen>
+	
+	<!-- LanguageWizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/LanguageSelection.py -->
+	<screen name="LanguageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="v-template2-nopig" />
+		<widget name="text" position="86,144" size="795,130" foregroundColor="white" backgroundColor="bgDark" font="Regular;22" transparent="1" valign="top" zPosition="1" />
+		<widget source="languages" render="Listbox" position="0,552" size="907,350" scrollbarMode="showOnDemand" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" alphatest="on" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (156,0), size = (837,50), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
+				MultiContentEntryPixmapAlphaBlend(pos = (86,5), size = (60,40), png = 2), # index 2 is the pixmap
+				],
+				"fonts": [gFont("Regular", 26)],
+				"itemHeight": 50
+				}</convert>
+		</widget>
+		<widget name="config" position="86,289" size="790,350" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+		<panel name="RemoteControlTemplate" />
+		<ePixmap pixmap="vskin-hd/v-buttons/key_red.png" position="86,668" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="languagetext" position="116,668" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<!-- CleanupWizard Plugin -->
+	<!-- https://github.com/libo/Enigma2/blob/master/lib/python/Plugins/SystemPlugins/CleanupWizard/CleanupWizard.py -->
+	<screen name="CleanupWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- VideoWizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/VideoWizard.py -->
+	<screen name="VideoWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="v-template2-nopig" />
+		<widget name="text" position="86,144" size="795,130" foregroundColor="white" backgroundColor="bgDark" font="Regular;22" transparent="1" valign="top" zPosition="1" />
+		<widget name="config" position="86,289" size="790,350" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+		<widget source="list" render="Listbox" position="0,289" size="907,350" scrollbarMode="showNever" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" alphatest="on" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+                                MultiContentEntryText(pos = (86, 0), size = (907, 50), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
+				"fonts": [gFont("Regular", 26)],
+				"itemHeight": 50
+				}</convert>
+		</widget>
+		<panel name="RemoteControlTemplate" />
+		<ePixmap pixmap="vskin-hd/v-buttons/key_red.png" position="86,668" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="languagetext" position="116,668" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+</skin>

@@ -1,0 +1,185 @@
+<skin>
+	<!-- Skin: Vskin HD(2016) Version 1.000 by kiddac : techkings.org -->
+	
+	<!-- This skin is not based on the works of any other skin. All graphics, icons, buttons, screens are my own hard work-->
+	<!-- If using any elements/graphics from this skin in your own work please reference me correctly -->
+	
+	<!-- This skin is a Freeware. Everyone can modify and use it in other images.	-->
+	
+        <!-- ****************************************************************************************************** -->
+	<!-- If you would like to buy me a beer for my efforts please use the paypal links on http://slyk1hd.yolasite.com/ -->
+	<!-- ****************************************************************************************************** -->
+	<output id="0">
+		<resolution xres="1280" yres="720" bpp="32" />
+	</output>
+	
+	<!-- includes -->
+	<include filename="/usr/share/enigma2/vskin-hd/v-button-templates.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-main-templates.xml" />
+	<!--<include filename="/usr/share/enigma2/vskin-hd/v-openatv-fake-menus.xml" />-->
+	<include filename="/usr/share/enigma2/vskin-hd/v-menu-templates.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-wizards.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-general.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-Oscams.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-CCcamInfo.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-ChannelSelection.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-epg.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-eventview.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-infobar.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-infopanel.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-information.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-motorised-dish.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-movies.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-network.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-plugins-system.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-plugins.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-timers.xml" />
+	<include filename="/usr/share/enigma2/vskin-hd/v-vix.xml" />
+	
+        <!-- fonts -->
+	<fonts>
+		<!-- default skin fonts -->
+		<!-- <font name="Fixed" filename="andale.ttf" scale="100" /> -->
+		<!-- <font name="Enigma" filename="/usr/share/fonts/valis_enigma.ttf" scale="100" />-->
+		<font name="Subtitlefont" filename="/usr/share/fonts/nmsbd.ttf"       scale="90" />
+		<font name="LCD"          filename="/usr/share/fonts/lcd.ttf"         scale="100" />
+		<font name="Replacement"  filename="/usr/share/fonts/ae_AlMateen.ttf" scale="90" replacement="1" />
+		
+                <!-- vskin fonts -->
+		<font name="Regular" filename="/usr/share/enigma2/vskin-hd/fonts/VSkin-Light.ttf" scale="100" />
+		<font name="Console" filename="/usr/share/enigma2/vskin-hd/fonts/lucon.ttf" scale="100" />
+		
+                <!-- font sizes -->
+               	<alias name="Body" font="Regular" size="20" height="25"/>
+		<alias name="TextNormal" font="Regular" size="20" height="24"/>
+		
+		<!-- context menu -->
+		<alias name="ChoiceList" font="Regular" size="21" height="30" />
+		
+                <!-- plugins -->
+		<alias name="PluginBrowser0" font="Regular" size="21" height="30" />        <!-- plugin name -->
+		<alias name="PluginBrowser1" font="Regular" size="14" height="20" />        <!-- plugin description -->
+		
+                <!-- help menus -->
+		<alias name="HelpMenuList" font="Regular" size="22" height="30" />
+		
+                <!-- virtual keyboard -->
+		<alias name="VirtualKeyboard" font="Regular" size="26" height="45" />
+		
+                <!-- used on tuner config - positioner -->
+		<alias name="SelectionList" font="Regular" size="22" height="30" />
+		<alias name="Body" font="screen_text" size="12" height="25" />
+		<alias name="TextNormal" font="screen_text" size="12" height="25" />
+		
+                <!-- locationbox i.e movie file location  -->
+		<alias name="FileList" font="Regular" size="22" height="30" />
+		<alias name="FileListMulti" font="Regular" size="22" height="30" />
+	</fonts>
+	
+        <!-- default colour list -->
+	<colors>
+		<color name="transparent" value="#ff000000" />
+		<color name="transpBlack" value="#80000000"/>
+		<color name="transpWhite" value="#80ffffff"/>
+		<color name="black" value="#00000000" />
+		<color name="red" value="#00ff0011" />
+		<color name="green" value="#307e13" />
+		<color name="blue" value="#000064c7"/>
+		<color name="yellow" value="#00bab329"/>
+		<color name="white" value="#00ffffff" />
+		<color name="zapgreen" value="#00007f0e" />
+		<color name="verydarkgrey" value="#00555555" />
+		<color name="darkgrey" value="#279e9fa4"/>
+		<color name="grey" value="#008c8c93" />
+		<!-- vskin Colour -->
+		<color name="vred" value="#00ff0000" />
+		<color name="textCol1" value="#00b58aa6" />
+		<color name="textCol2" value="#00878889" />
+		<color name="bgDark" value="#000c0709" />
+		<color name="bgMid" value="#0024111a" />
+		<color name="selectedBG" value="#00670004" />
+		<color name="highlightBG" value="#00432235" />
+		<color name="infobarBG" value="#002e1d2f" />
+		<color name="messageBG" value="#1a000000" />
+		<color name="epgBG" value="#002e1d2f" />
+		<color name="timelineBG" value="#00000000" />
+		<color name="black50" value="#80000000" />
+	</colors>
+	
+        <windowstyle type="skinned" id="0">
+		<title offset="25,15" font="Regular;24" />
+		<color name="Background" color="messageBG" />
+		<color name="LabelForeground" color="textCol1" />
+		<color name="ListboxBackground" color="messageBG" />
+		<color name="ListboxForeground" color="white" />
+		<color name="ListboxSelectedBackground" color="selectedBG" />
+		<color name="ListboxSelectedForeground" color="white" />
+		<color name="ListboxMarkedBackground" color="black" />
+		<color name="ListboxMarkedForeground" color="textCol1" />
+		<color name="ListboxMarkedAndSelectedBackground" color="white" />
+		<color name="ListboxMarkedAndSelectedForeground" color="black" />
+		<color name="WindowTitleForeground" color="white" />
+		<color name="WindowTitleBackground" color="messageBG" />
+		<!-- menu border -->
+		<borderset name="bsWindow">
+			<pixmap pos="bpTopLeft" filename="screens/b_tl.png" />
+			<pixmap pos="bpTop" filename="screens/b_t.png" />
+			<pixmap pos="bpTopRight" filename="screens/b_tr.png" />
+			<pixmap pos="bpLeft" filename="screens/b_l.png" />
+			<pixmap pos="bpRight" filename="screens/b_r.png" />
+			<pixmap pos="bpBottomLeft" filename="screens/b_bl.png" />
+			<pixmap pos="bpBottom" filename="screens/b_b.png" />
+			<pixmap pos="bpBottomRight" filename="screens/b_br.png" />
+		</borderset>
+	</windowstyle>
+	
+	<parameters>
+		<!-- <parameter name="ChoicelistDash" value="0,2,650,42"/> -->
+		<!-- <parameter name="ChoicelistName" value="48,1,790,30"/>  -->
+		<!-- <parameter name="ChoicelistIcon" value="10,0,38,30"/>   -->
+		<!--	<parameter name="ConfigListSeperator" value="350"/>  -->
+		<parameter name="AutotimerEnabledIcon" value="10,2,25,24" />        <!-- Autotimer tick box -->
+		<parameter name="AutotimerRecordIcon" value="40,5,20,20" />         <!-- Autotimer Record Icon -->
+		<parameter name="VirtualKeyboard" value="45,45" />                  <!-- virtual keyboard keyicon size -->
+		<parameter name="PluginBrowserIcon" value="86,5,100,40" />          <!-- plugins main icon -->
+		<parameter name="PluginBrowserName" value="196,3,30" />             <!-- plugins name -->
+		<parameter name="PluginBrowserDescr" value="196,28,20" />           <!-- plugins description -->
+		<parameter name="PluginBrowserDownloadIcon" value="86,0,60,50" />   <!-- plugins + - boxed icon -->
+		<parameter name="PluginBrowserDownloadName" value="156,3,30" />     <!-- plugins download name - see font alias PluginBrowser0 -->
+		<parameter name="PluginBrowserDownloadDescr" value="156,28,20" />   <!-- plugins download description -see font alias PluginBrowser1 -->
+		<!--
+                 <parameter name="HelpMenuListExtHlp0" value="0,0,795,28"/>
+		<parameter name="HelpMenuListExtHlp1" value="0,27,795,23"/>
+		-->
+		<parameter name="HelpMenuListHlp" value="10,8,795,30" />            <!-- help menu text -->
+		<parameter name="SelectionListDescr" value="50,2,750,30" />
+		
+                <!-- used on tuner config - positioner -->
+		<parameter name="SelectionListLock" value="10,2,25,24" />
+		<parameter name="SelectionListLockOff" value="10,2,25,24" />
+		
+                <!-- example is software management - backup list -->
+		<parameter name="FileListName" value="40,2,750,30" />
+		<parameter name="FileListIcon" value="10,5,20,20" />
+		<parameter name="FileListMultiName" value="75,2,715,30" />
+		<parameter name="FileListMultiIcon" value="45,5,20,20" />
+		<parameter name="FileListMultiLock" value="10,2,25,25" />
+		<!--
+                <parameter name="ConfigListSeperator" value="350"/>
+
+		<parameter name="PicturePlayerThumb" value="35,190,30,200,20,14"/>
+		
+		 <parameter name="DreamexplorerName" value="40,2,660,26"/>
+		<parameter name="DreamexplorerIcon" value="10,3,22,22"/>
+		
+                <parameter name="PlayListName" value="25,0,675,30"/>
+		<parameter name="PlayListIcon" value="5,7,16,16"/>
+		
+		<parameter name="ServiceInfo" value="0,0,300,30"/>
+		<parameter name="ServiceInfoLeft" value="0,0,300,25"/>
+		<parameter name="ServiceInfoRight" value="300,0,600,25"/>
+		-->
+	</parameters>
+</skin>
+
+

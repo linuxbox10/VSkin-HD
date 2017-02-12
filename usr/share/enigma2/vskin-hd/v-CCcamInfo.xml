@@ -1,0 +1,99 @@
+<skin>
+        <!-- CCcamInfo -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/CCcamInfo.py -->
+	<screen name="CCcamInfoMain" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="menu" position="86,143" size="790,510" selectionPixmap="v-selectbars/selectbar-30-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid"
+                foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" alphatest="blend" itemHeight="30" valign="center"
+                transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2"/>
+		<eLabel text="Menu config" position="116,668" size="170,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgDark" zPosition="2" />
+		<eLabel text="Local box" position="316,668" size="170,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgDark" zPosition="2" />
+		<eLabel text="Remote box" position="516,668" size="170,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgDark" zPosition="2" />
+		<eLabel text="Free memory" position="716,668" size="170,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgDark" zPosition="2" />
+		<panel name="4RGYB-Bot" />
+	</screen>
+	
+	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,143" size="790,510" enableWrapAround="1" itemHeight="30" font="Regular; 21" scrollbarMode="showOnDemand" backgroundColor="bgDark"
+                foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-30-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" zPosition="2" transparent="1" />
+      </screen>
+	
+	<screen name="CCcamInfoInfoScreen" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="text" font="Console;16" position="86,143" size="790,500" foregroundColor="white" backgroundColor="bgMid" zPosition="10" transparent="1" />
+       </screen>
+
+	<screen name="CCcamShareViewMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,143" size="790,240" scrollbarbackgroundPixmap="v-selectbars/selectbar-bg.png" selectionPixmap="v-selectbars/selectbar-30-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white"
+                alphatest="blend" itemHeight="30" font="Regular;21" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+		<ePixmap position="86,393" size="790,2" pixmap="div-h.png" alphatest="blend" zPosition="2" transparent="1" />
+		<widget name="title" font="Regular;21" position="86,403" size="790,30" backgroundColor="bgDark" foregroundColor="white" zPosition="2" transparent="1" />
+		<widget name="uphops" font="Regular;18" position="86,433" size="790,30" backgroundColor="bgDark" foregroundColor="white" zPosition="2" transparent="1" />
+		<widget name="cards" font="Regular;18" position="86,463" size="790,30" backgroundColor="bgDark" foregroundColor="white" zPosition="2" transparent="1" />
+		<widget name="providers" font="Regular;18" position="86,493" size="790,30" backgroundColor="bgDark" foregroundColor="white" zPosition="2" transparent="1" />
+		<widget name="reshare" font="Regular;18" position="86,523" size="790,30" backgroundColor="bgDark" foregroundColor="white" zPosition="2" transparent="1" />
+        </screen>
+	
+	<screen name="CCcamInfoSubMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,143" size="790,240" scrollbarbackgroundPixmap="v-selectbars/selectbar-bg.png" selectionPixmap="v-selectbars/selectbar-30-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white"
+                alphatest="blend" itemHeight="30" font="Regular;21" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="5" />
+		<ePixmap position="86,393" size="790,2" pixmap="div-h.png" alphatest="blend" zPosition="2" transparent="1" />
+		<widget name="info" position="86,403" size="790,240" font="Regular;21" foregroundColor="white" backgroundColor="bgDark" zPosition="2" transparent="1" />
+         </screen>
+
+	<screen name="CCcamInfoServerMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,143" size="790,240" scrollbarbackgroundPixmap="v-selectbars/selectbar-bg.png" selectionPixmap="v-selectbars/selectbar-30-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white"
+                alphatest="blend" itemHeight="30" font="Regular;21" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+		<ePixmap position="86,393" size="790,2" pixmap="div-h.png" alphatest="blend" zPosition="2" transparent="1" />
+		<widget name="info" position="86,403" size="790,240" font="Regular;21" foregroundColor="white" backgroundColor="bgDark" zPosition="2" transparent="1" />
+        </screen>
+	
+	<screen name="CCcamInfoConfigMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="config" position="86,143" size="790,510" enableWrapAround="1" itemHeight="30" font="Regular; 21" scrollbarMode="showOnDemand" backgroundColor="bgDark"
+                foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-30-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" zPosition="2" transparent="1" />
+		<ePixmap pixmap="v-buttons/key_ok.png" position="86,668" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+        </screen>
+	
+	<screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,143" size="790,510"  enableWrapAround="1" itemHeight="30" font="Regular; 21" scrollbarMode="showOnDemand" backgroundColor="bgDark"
+                foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-30-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" zPosition="2" transparent="1" />
+		<panel name="4RGYB-Bot" />
+	</screen>
+	
+	<screen name="CCcamInfoShareInfo" position="center,center" size="580,450" backgroundColor="messageBG">
+		<widget name="list" position="0,0" size="580,420" enableWrapAround="1" itemHeight="70" font="Regular; 21" scrollbarMode="showOnDemand" backgroundColor="bgDark"
+                foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-70-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" zPosition="2" transparent="1" />
+		<panel position="0,420" size="580,30">
+			<panel name="4RGYB-Mess-Bot-Source" />
+		</panel>
+	</screen>
+	
+	<screen name="CCcamInfoConfigSwitcher" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,143" size="790,510"  enableWrapAround="1" itemHeight="30" font="Regular; 21" scrollbarMode="showOnDemand" backgroundColor="bgDark"
+                foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-30-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" zPosition="5" transparent="1" />
+		<panel name="4RGYB-Bot" />
+	</screen>
+	
+	<screen name="CCcamInfoMenuConfig" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,143" size="790,510"  enableWrapAround="1" itemHeight="30" font="Regular; 21" scrollbarMode="showOnDemand" backgroundColor="bgDark"
+                foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-30-1280-square.png"
+                backgroundPixmap="v-selectbars/selectbar-bg.png" zPosition="2" transparent="1" />
+		<panel name="3RGY-Bot" />
+	</screen>
+</skin>

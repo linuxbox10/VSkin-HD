@@ -1,0 +1,197 @@
+<skin>
+	<!-- CronManager (info panel ->  extensions -> cron manager, is different to timer menu -> cron timers) -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/CronManager.py -->
+	<screen name="CronManager" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<panel name="active-block" />
+		<widget source="list" render="Listbox" textOffset="86,0" position="0,205" size="876,448" foregroundColor="white" backgroundColor="bgDark" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" backgroundColorSelected="selectedBG" valign="center" itemHeight="50" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (86, 10), size = (795, 30), font=0, text = 0),
+				],
+				"fonts": [gFont("Regular",24)],
+				"itemHeight": 50
+				}</convert>
+		</widget>
+		<panel name="4RGYB-Bot" />
+	</screen>
+	
+	<screen name="SetupCronConf" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup" />
+	</screen>
+	
+	<!-- ##MountManager## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/MountManager.py -->
+	<!-- MountManager -->
+	<screen name="HddMount" position="0,0" size="1280,720" title="Mount Manager" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,144" size="881,511" scrollbarMode="showOnDemand" transparent="1" foregroundColor="white" backgroundColor="bgDark" foregroundColorSelected="white" backgroundColorSelected="selectedBG">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (186, 5), size = (795, 30), font=0, text = 0),
+				 MultiContentEntryText(pos = (186, 30), size = (795, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (86, 5), size = (80, 80), png = 2),
+				],
+				"fonts": [gFont("Regular",24),gFont("Regular",20)],
+				"itemHeight": 85
+				}</convert>
+		</widget>
+		<widget name="lab1" position="86,144" size="795,511" font="Regular;21" backgroundColor="bgDark" foregroundColor="white" valign="center" halign="center" transparent="1" zPosition="2" />
+		<panel name="4RGYB-Bot" />
+	</screen>
+	
+	<!-- hhdmounts - setup mounts -->
+	<screen name="DevicePanelConf" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="4" title="UserManager">
+		<panel name="vbackground" />
+		<panel position="74,24" size="756,162">
+			<panel name="vdescription-box" />
+		</panel>
+		<panel name="vpig-bg" />
+		<panel name="vpig" />
+		<panel position="86,200" size="93,57">
+			<panel name="vskin-logo" />
+		</panel>
+		<widget source="Title" render="Label" position="200,186" size="694,54" valign="center" halign="left" font="Regular;40" noWrap="0" transparent="1" foregroundColor="white" backgroundColor="bgMid" />
+		<panel name="v-blankman" />
+		<panel name="time" />
+		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+		<widget name="config" position="86,285" size="790,400" scrollbarbackgroundPixmap="v-selectbars/selectbar-bg.png" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+		<widget name="Linconn" position="922,285" size="278,435" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" zPosition="2" transparent="1" />
+		<panel name="setup-buttons" />
+	</screen>
+	
+	<!-- ##QuickMenu ## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/QuickMenu.py -->
+	<screen name="QuickMenu" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,144" size="380,500" foregroundColor="white" backgroundColor="bgDark" foregroundColorSelected="white" backgroundColorSelected="selectedBG" alphatest="blend" itemHeight="50" transparent="1" />
+		<widget name="sublist" position="496,144" size="380,500" foregroundColor="white" backgroundColor="bgDark" foregroundColorSelected="white" backgroundColorSelected="selectedBG" alphatest="blend" itemHeight="50" transparent="1" />
+		<eLabel position="486,142" size="2,500" backgroundColor="textCol1" zPosition="3" />
+		<widget name="description" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<panel name="3RGY-Bot" />
+	</screen>
+	
+	<screen name="QuickMenuDevices" position="0,0" size="1280,720" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="devicelist" render="Listbox" position="0,144" size="881,511" scrollbarMode="showOnDemand" transparent="1" foregroundColor="white" backgroundColor="bgDark" foregroundColorSelected="white" backgroundColorSelected="selectedBG">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (186, 5), size = (795, 30), font=0, text = 0),
+				 MultiContentEntryText(pos = (186, 30), size = (795, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (86, 5), size = (80, 80), png = 2),
+				],
+				"fonts": [gFont("Regular",24),gFont("Regular",20)],
+				"itemHeight": 85
+				}</convert>
+		</widget>
+		<widget name="lab1" position="86,144" size="795,511" font="Regular;21" backgroundColor="bgDark" foregroundColor="white" valign="center" halign="center" transparent="1" zPosition="2" />
+	
+	</screen>
+	
+	<!-- ##RestartNetwork## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/RestartNetwork.py -->
+	<screen name="RestartNetwork" position="center,center" size="600,100" title="Restart Network Adapter">
+		<widget name="label" position="10,30" size="500,50" halign="center" font="Regular;20" transparent="1" foregroundColor="white" />
+	</screen>
+	
+	<!-- ##ScriptRunner## / JobManager -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/ScriptRunner.py -->
+	<screen name="ScriptRunner" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="lab1" position="86,143" size="795,50" font="Regular;22" foregroundColor="white" backgroundColor="bgMid" valign="center" transparent="1" />
+		<widget name="list" position="86,203" size="795,450" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" foregroundColor="white" backgroundColor="bgDark" foregroundColorSelected="white" backgroundColorSelected="selectedBG" valign="center" itemHeight="50" font="Regular; 21" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="5"/>
+		<panel name="2RG-Bot" />
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(30)</applet>
+	</screen>
+	
+	<!-- ##SoftcamPanel## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/SoftcamPanel.py -->
+	<screen name="SoftcamPanel" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="config" position="86,143" size="790,100" scrollbarbackgroundPixmap="v-selectbars/selectbar-bg.png" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="50" font="Regular;26" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="2" />
+		<ePixmap pixmap="v-backgrounds/softcam-block.png" position="86,284" size="385,70" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="v-backgrounds/softcam-block.png" position="491,284" size="385,70" alphatest="blend" zPosition="2" />
+		<widget name="actifcam" position="96,284" size="365,50" font="Regular;21" foregroundColor="white" backgroundColor="highlightBG" itemHeight="50" valign="center" halign="left" transparent="1" zPosition="3" />
+		<widget name="actifcam2" position="501,284" size="365,50" font="Regular;21" foregroundColor="white" backgroundColor="highlightBG" itemHeight="50" valign="center" halign="right" transparent="1" zPosition="3" />
+		<widget name="ecminfo" position="96,367" size="851,272" font="Regular;21" foregroundColor="white" backgroundColor="bgDark" transparent="1" zPosition="2" />
+		<panel name="4RGYB-Bot" />
+	</screen>
+	
+	<!-- info panel SoftcamPanel Install-->
+	<screen name="ShowSoftcamPackages" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,510" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+					
+						MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+						MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+                                                MultiContentEntryPixmapAlphaBlend(pos = (86, 51), size = (851, 1), png = 5), # index 5 is the div pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 51
+				}</convert>
+		</widget>
+		<panel name="2RG-Bot-Source" />
+	</screen>
+	
+	<!-- ##SoftwarePanel## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/SoftwarePanel.py -->
+	<!-- software update -->
+	<screen name="SoftwarePanel" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1" title="SoftwarePanel">
+		<panel name="v-template2-pig" />
+		<widget name="packagetext" position="922,285" size="200,30" font="Regular;24" valign="center" halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="2" />
+		<widget name="packagenr" position="1122,285" size="50,30" font="Regular;24" valign="center" halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="2" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+					
+						MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+						MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+                                                MultiContentEntryPixmapAlphaBlend(pos = (0, 52), size = (841, 2), png = 5), # index 5 is the div pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 56
+				}</convert>
+		</widget>
+		<eLabel text="Feed Status:" position="922,335" size="200,30" font="Regular;24" valign="center" halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="2" />
+		<widget name="a_off" position="1117,335" size="24,32" pixmap="v-icons/feed-error.png" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="a_red" position="1117,335" size=" 24,32" pixmap="v-icons/feed-red.png" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="a_yellow" position="1117,335" size="24,32" pixmap="v-icons/feed-yellow.png" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="a_green" position="1117,335" size="24,32" pixmap="v-icons/feed-green.png" alphatest="blend" transparent="1" zPosition="2" />
+	
+		<ePixmap pixmap="v-buttons/key_red.png" position="86,668" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="key_red" position="116,668" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+		<widget name="key_green_pic" pixmap="v-buttons/key_green.png" position="286,668" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+		<widget name="key_green" position="316,668" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<!-- ##SwapManager## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/SwapManager.py -->
+	<screen name="Swap" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="autostart_off" position="86,300" size="32,32" zPosition="1" pixmap="icons/lock_off.png" alphatest="blend" transparent="1" />
+		<widget name="autostart_on" position="86,300" size="32,32" zPosition="2" pixmap="icons/lock_on.png" alphatest="blend" transparent="1" />
+		<widget name="lab1" position="126,300" size="360,30" font="Regular;21" valign="center" transparent="1" foregroundColor="white" backgroundColor="bgDark" />
+		<widget name="lab2" position="86,350" size="150,30" font="Regular;21" valign="center" transparent="1" foregroundColor="white" backgroundColor="bgDark" />
+		<widget name="lab3" position="86,400" size="150,30" font="Regular;21" valign="center" transparent="1" foregroundColor="white" backgroundColor="bgDark" />
+		<widget name="lab4" position="86,450" size="150,30" font="Regular;21" valign="center" transparent="1" foregroundColor="white" backgroundColor="bgDark" />
+		<widget name="labplace" position="236,350" size="220,30" font="Regular;21" valign="center" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget name="labsize" position="236,400" size="220,30" font="Regular;21" valign="center" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget name="inactive" position="236,450" size="100,30" font="Regular;21" valign="center" halign="center" foregroundColor="white" backgroundColor="red" />
+		<widget name="active" position="236,450" size="100,30" font="Regular;21" valign="center" halign="center" foregroundColor="white" backgroundColor="green" />
+		<panel name="4RGYB-Bot" />
+	</screen>
+	
+	<!-- Info Panel Menus -->
+	<screen name="Infopanel" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/main-menu-bg.png" position="100,251" size="552,469" alphatest="blend" zPosition="1" />
+		<widget name="Mlist" position="133,285" size="484,435" selectionPixmap="v-selectbars/selectbar-484.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="50" font="Regular;28" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
+		<ePixmap pixmap="v-backgrounds/menu-gradient.png" position="0,e-55" size="1280,54" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<!-- Info Panel Infos -->
+	<screen name="Info" position="0,0" size="1280,720" title="Info" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="label2" position="86,144" size="795,24" font="Console;18" foregroundColor="textCol1" backgroundColor="bgDark" zPosition="2" transparent="1" />
+		<widget name="label1" position="86,177" size="795,470" font="Console;16" zPosition="3" transparent="1" backgroundColor="bgDark" foregroundColor="white" />
+	</screen>
+</skin>

@@ -1,0 +1,376 @@
+
+<skin>
+	<!-- DefaultServicesScanner -->
+	<!-- exact same screen as servicescan - (manual scan) -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/DefaultServicesScanner/plugin.py -->
+	<screen name="DefaultServiceScan" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="ServiceScan" />
+	</screen>
+	
+	<!-- Plugin Browser -->
+	<screen name="PluginBrowser" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="Plugin browser">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="0,143" size="876,585" foregroundColor="white" backgroundColor="bgDark" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-876-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" backgroundColorSelected="selectedBG" itemHeight="50" transparent="1" />
+		<panel position="458,100" size="0,30">
+			<panel name="R-Source" />
+		</panel>
+		<panel position="682,100" size="0,30">
+			<panel name="G-Source" />
+		</panel>
+		<ePixmap pixmap="v-buttons/key_ok.png" position="1163,668" size="35,30" transparent="1" alphatest="blend" zPosition="3" />
+		<ePixmap pixmap="v-buttons/key_menu.png" position="1105,668" size="38,30" transparent="1" alphatest="blend" zPosition="3" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-55" size="1280,54" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<screen name="PluginDownloadBrowser" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1" title="Downloadable plugins">
+		<panel name="v-template2-pig" />
+		<!--<widget name="text" position="0,143" size="876,577" foregroundColor="white" backgroundColor="bgDark" font="Regular;24" halign="center" valign="center" zPosition="2" transparent="1"/> -->
+		<widget name="text" position="922,285" size="278,435" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+	          <widget name="list" position="0,143" size="876,585" foregroundColor="white" backgroundColor="bgDark" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-876-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" backgroundColorSelected="selectedBG" itemHeight="50" transparent="1" />
+		<ePixmap pixmap="v-buttons/key_ok.png" position="1163,668" size="35,30" transparent="1" alphatest="blend" zPosition="3" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-55" size="1280,54" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<!-- HdmiCec -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/HdmiCEC/plugin.py -->
+	<screen name="HdmiCECSetupScreen" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="4">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+		<widget name="config" position="86,285" size="790,435" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" zPosition="2" />
+		<panel name="setup-buttons" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-55" size="1280,54" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<!-- Satfinder -->
+	<!-- tuner config - signal finder -->
+	<!--  https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/Satfinder/plugin.py -->
+	<screen name="Satfinder" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="Satfinder">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+		<widget name="config" position="86,285" size="790,435" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" zPosition="2" />
+		<widget source="Frontend" render="Label" position="922,285" zPosition="2" size="278,30" font="Regular;22" valign="center" halign="center" foregroundColor="white" backgroundColor="bgMid" transparent="1">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<eLabel text="SNR:" position="922,320" size="60,30" font="Regular;22" valign="center" halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<widget source="Frontend" render="Progress" position="982,324" size="155,20" pixmap="bar_snr.png" borderWidth="1" borderColor="white">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="1145,320" size="65,30" font="Regular;22" foregroundColor="white" backgroundColor="bgMid" transparent="1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel text="AGC:" position="922,355" size="60,30" font="Regular;22" valign="center" halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<widget source="Frontend" render="Progress" position="982,359" size="155,20" pixmap="bar_ber.png" borderWidth="1" borderColor="white">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="1145,355" size="65,30" font="Regular;22" foregroundColor="white" backgroundColor="bgMid" transparent="1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<eLabel text="BER:" position="922,390" size="60,30" font="Regular;22" valign="center" halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<widget source="Frontend" render="Progress" position="982,394" size="155,20" pixmap="bar_ber.png" borderWidth="1" borderColor="white">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="1145,390" size="65,30" font="Regular;22" foregroundColor="white" backgroundColor="bgMid" transparent="1">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<eLabel name="lock" text="Lock:" position="1012,425" size="60,30" font="Regular;22" valign="center" halign="right" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="1082,429" zPosition="1" size="25,24" alphatest="blend">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="1082,429" zPosition="1" size="25,24" alphatest="blend">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<panel name="2RG-Bot-Source" />
+	</screen>
+	
+	<!-- ##SkinSelector## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/SkinSelector/plugin.py -->
+	<screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+		<widget name="SkinList" textOffset="10,8" position="86,285" size="790,435" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" zPosition="2" />
+		<widget name="Preview" position="922,285" size="278,210" />
+		<ePixmap pixmap="v-buttons/key_ok.png" position="1163,668" size="35,30" transparent="1" alphatest="blend" zPosition="3" />
+		<panel name="setup-buttons" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-55" size="1280,54" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<!-- ##VideoEnhancement## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/VideoEnhancement/plugin.py -->
+	<screen name="VideoEnhancementSetup" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+		<widget name="config" position="86,285" size="790,435" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" zPosition="2" />
+		<widget name="description" position="922,285" size="278,435" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<panel name="4RGYB-Top-Source" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-55" size="1280,54" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<screen name="VideoEnhancementPreview" position="center,e-170" size="560,170" title="VideoEnhancementPreview">
+		<ePixmap pixmap="buttons/red.png" position="0,0" size="140,40" alphatest="blend" />
+		<ePixmap pixmap="buttons/green.png" position="140,0" size="140,40" alphatest="blend" />
+		<widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+		<widget name="config" position="5,50" size="550,80" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="skin_default/div-h.png" alphatest="blend" position="0,130" zPosition="1" size="560,2" />
+		<widget source="introduction" render="Label" position="0,140" size="550,25" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
+	</screen>
+	
+	<!-- not checked -->
+	<!-- #WirelessLan#-->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/WirelessLan/plugin.py -->
+	<!-- see SystemNetworkInfo - information -->
+	<screen name="WlanStatus" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="LabelBSSID" render="Label" position="336,189" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="LabelESSID" render="Label" position="336,229" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="LabelQuality" render="Label" position="336,269" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="LabelSignal" render="Label" position="336,309" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="LabelBitrate" render="Label" position="336,349" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="LabelEnc" render="Label" position="336,389" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="BSSID" render="Label" position="496,189" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="ESSID" render="Label" position="496,229" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="quality" render="Label" position="496,269" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="signal" render="Label" position="496,309" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="bitrate" render="Label" position="496,349" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<widget source="enc" render="Label" position="496,389" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="textCol1" backgroundColor="bgDark" transparent="1" />
+		<ePixmap position="86,559" size="790,2" pixmap="div-h.png" alphatest="blend" transparent="1" />
+		<widget source="IFtext" render="Label" position="336,569" size="120,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="white" backgroundColor="bgDark" transparent="1" />
+		<widget source="IF" render="Label" position="496,569" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="white" backgroundColor="bgDark" transparent="1" />
+		<widget source="Statustext" render="Label" position="336,600" size="115,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="white" backgroundColor="bgDark" transparent="1" />
+		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="496,607" zPosition="10" size="15,16" transparent="1" alphatest="blend" />
+		<panel name="1R-Bot-Source" />
+	</screen>
+	
+	<!-- not checked -->
+	
+	<screen name="WlanScan" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="Select a wireless network">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+ 							MultiContentEntryText(pos = (86, 0), size = (600, 30), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the essid
+			                                MultiContentEntryText(pos = (486, 0), size = (390, 20), font=1, flags = RT_HALIGN_RIGHT, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 0 is the signal
+
+ 							MultiContentEntryText(pos = (86, 30), size = (250, 20), font=1, flags = RT_HALIGN_LEFT, text = 5, color = 0x00b58aa6, color_sel = 0x00966262), # index 5 is the interface
+						
+							MultiContentEntryText(pos = (86, 30), size = (790, 20), font=1, flags = RT_HALIGN_CENTER, text = 4, color = 0x00b58aa6, color_sel = 0x00966262), # index 0 is the encryption
+ 							MultiContentEntryText(pos = (486, 30), size = (250, 20), font=1, flags = RT_HALIGN_RIGHT, text = 3, color = 0x00b58aa6, color_sel = 0x00966262), # index 0 is the maxrate
+						
+ 						],
+ 					"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
+ 					"itemHeight": 56
+ 					}</convert>
+		</widget>
+		<widget source="info" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<panel name="3RGY-Bot-Source" />
+	</screen>
+	
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/SoftwareManager/plugin.py-->
+	<!-- Software Manager Screens- show default backup files -->
+	<!-- BackupRestore -->
+	<screen name="BackupSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="checkList" position="86,143" size="795,480" itemHeight="30" transparent="1" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-30-1280-square.png" enableWrapAround="1" />
+		<widget source="summary_description" render="Label" position="86,610" size="795,30" foregroundColor="textCol1" backgroundColor="bgDark" font="Regular; 24" halign="left" transparent="1" />
+		<panel name="3RGY-Bot-Source" />
+	</screen>
+	
+	<!-- advanced - advancedrestore -->
+	<screen name="RestoreMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="filelist" position="0,143" size="876,500" textOffset="86,12" itemHeight="50" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5" />
+		<panel name="3RGY-Bot-Source" />
+	</screen>
+	
+	<!-- flash online -->
+	<!-- FlashOnline / doFlashImage / DeviceBrowser -->
+	<!-- ImageBackup -->
+	<screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="info-hdd" position="86,143" zPosition="1" size="450,250" font="Regular;20" halign="left" valign="top" backgroundColor="bgDark" foregroundColor="white" transparent="1" />
+		<widget name="info-usb" position="86,393" zPosition="1" size="450,250" font="Regular;20" halign="left" valign="top" backgroundColor="bgDark" foregroundColor="white" transparent="1" />
+		<panel name="4RGYB-Bot-Source" />
+	</screen>
+	
+	<!-- software manager - advanced -->
+	<screen name="UpdatePluginMenu" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="menuleft" />
+		<widget name="description" position="922,285" size="278,385" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<widget source="menu" render="Listbox" position="922,285" size="278,385" scrollbarMode="showNever" foregroundColor="white" backgroundColor="bgMid" transparent="1" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">{"template": [
+ 							MultiContentEntryText(pos = (0, 0), size = (278, 435), flags = RT_HALIGN_LEFT|RT_VALIGN_TOP|RT_WRAP, text = 2), # index 2 is the Description,
+						],
+					"fonts": [gFont("Regular", 24)],
+					"itemHeight": 385
+ 					}</convert>
+		</widget>
+		<widget source="status" render="Label" position="922,e-80" size="278,50" font="Regular;22" foregroundColor="textCol1" backgroundColor="bgMid" transparent="1" zPosition="11" />
+		<ePixmap pixmap="v-backgrounds/menu-gradient.png" position="0,e-55" size="1280,54" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<!-- not checked -->
+	<screen name="SoftwareManagerSetup" position="0,0" size="1280,720" backgroundColor="transparent" title="SoftwareManager setup">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+		<widget name="config" position="86,285" size="790,435" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" alphatest="blend" itemHeight="50" font="Regular;26" transparent="1" enableWrapAround="1" zPosition="2" />
+		<widget source="introduction" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<panel name="4RGYB-Bot-Source" />
+	</screen>
+	
+	<!-- not checked -->
+	<!-- software manager - system-backup - info button -->
+	<screen name="SoftwareManagerInfo"  position="0,0" size="1280,720" backgroundColor="transparent" title="SoftwareManager information">
+		<panel name="v-template2-pig" />
+                <widget source="list" render="Listbox" position="0,143" size="876,504" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+ 							MultiContentEntryText(pos = (86, 0), size = (790, 50), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+						],
+					"fonts": [gFont("Regular", 24),gFont("Regular", 22)],
+ 					"itemHeight": 50
+ 					}</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<panel name="4RGYB-Bot-Source" />
+	</screen>
+	
+	<!-- software management - install extensions -->
+	<screen name="PluginManager" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"templates":
+					{"default": (56,[
+							MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+							MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 2 is the description
+							MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 5), # index 5 is the status pixmap
+						
+						]),
+					"category": (56,[
+							MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+							MultiContentEntryText(pos = (136, 28), size = (700, 18), font=2, flags = RT_HALIGN_LEFT, text = 1, color = 0x00b58aa6, color_sel = 0x00966262), # index 1 is the description
+						
+						])
+					},
+					"fonts": [gFont("Regular", 22),gFont("Regular", 14),gFont("Regular", 14)],
+					"itemHeight": 56
+				}</convert>
+		</widget>
+		<widget source="status" render="Label" position="922,285" size="278,435" font="Regular;24"  halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="2" />
+		<panel name="4RGYB-Bot-Source" />
+	</screen>
+	
+	<!-- software management - install extensions end screen -->
+	<screen name="PluginManagerInfo" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+		 	        MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+				MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1, color = 0x00b58aa6, color_sel = 0x00966262), # index 1 is the description
+				MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 2), # index 2 is the status pixmap
+
+				],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 56
+				}</convert>
+		</widget>
+		<widget source="status" render="Label" position="922,285" size="278,435" font="Regular;24" valign="center" halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="2" />
+		<panel name="2RG-Bot-Source" />
+	</screen>
+	
+	<!-- software management - install extensions - help button -->
+	<screen name="PluginManagerHelp" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+		 	        MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+				MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1, color = 0x00b58aa6, color_sel = 0x00966262), # index 1 is the description
+				MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 2), # index 2 is the status pixmap
+
+				],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 56
+				}</convert>
+		</widget>
+		<widget source="status" render="Label" position="922,285" size="278,435" font="Regular;24" valign="center" halign="left" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="2" />
+		<panel name="1R-Bot-Source" />
+	</screen>
+	
+	<!-- software management - install extensions - view details -->
+	<screen name="PluginDetails" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget name="statuspic" position="86,143" size="48,48" alphatest="blend" zPosition="0" transparent="1" />
+		<widget source="author" render="Label" position="136,143" size="700,48" zPosition="1" font="Regular;24" foregroundColor="white" backgroundColor="bgDark" transparent="1" />
+		<widget name="divpic" position="86,201" size="790,2" alphatest="blend" />
+		<widget name="detailtext" position="86,212" size="790,440" transparent="1" font="Regular;20" foregroundColor="white" backgroundColor="bgDark" />
+		<widget name="screenshot" position="922,285" size="300,330" alphatest="blend" zPosition="5" />
+		<panel name="2RG-Bot-Source" />
+	</screen>
+	
+	<!-- infopanel - software manager - software update - progress -->
+	<screen name="UpdatePlugin" position="center,center" size="550,150">
+		<widget name="activityslider" position="0,0" size="550,5" />
+		<widget source="package" render="Label" position="10,30" size="540,30" font="Regular;21" halign="center" valign="center" foregroundColor="white" backgroundColor="messageBG" transparent="1" />
+	
+		<widget name="slider" position="0,70" size="550,30" />
+		<widget source="status" render="Label" position="10,110" size="540,30" font="Regular;21" halign="center" valign="center" foregroundColor="white" backgroundColor="messageBG" transparent="1" />
+	</screen>
+	
+	<!-- software manager - ipkg source -->
+	<screen name="IPKGMenu" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget name="filelist" position="0,143" size="876,500" textOffset="86,12" itemHeight="50" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5" />
+		<panel name="2RG-Bot-Source" />
+	</screen>
+	
+	<!-- software manager - ipkg source - edit -->
+	<screen name="IPKGSource" position="center,center" size="1080,100">
+		<widget name="text" position="10,10" size="1060,30" font="Regular;25" foregroundColor="white" backgroundColor="bgDark" transparent="1" />
+		<ePixmap pixmap="v-buttons/key_red.png" position="0,72" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+		<widget source="key_red" render="Label" position="30,72" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+		<ePixmap pixmap="v-buttons/key_green.png" position="150,72" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+		<widget source="key_green" render="Label" position="180,72" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<!-- software manager - ipkg-manager -->
+	<screen name="PacketManager" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+					
+						MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+						MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+                                                MultiContentEntryPixmapAlphaBlend(pos = (0, 52), size = (841, 2), png = 5), # index 5 is the div pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 56
+				}</convert>
+		</widget>
+		<panel name="2RG-Bot-Source" />
+	</screen>
+	
+	<screen name="IpkgInstaller" position="0,0" size="1280,720" title="Install extensions" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="86,143" size="795,500" itemHeight="50" scrollbarMode="showOnDemand" backgroundColor="bgMid" foregroundColor="white" backgroundColorSelected="selectedBG" foregroundColorSelected="white" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5" enableWrapAround="1" />
+		<widget source="introduction" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="white" backgroundColor="bgMid" transparent="1" />
+		<panel name="4RGYB-Bot-Source" />
+	</screen>
+	
+	<!-- not checked -->
+	<screen name="ShowUpdatePackages" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="New Packages">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="5,50" size="520,365" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">{"template": [
+					
+						MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+						MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+                                                MultiContentEntryPixmapAlphaBlend(pos = (0, 52), size = (841, 2), png = 5), # index 5 is the div pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 56
+				}</convert>
+		</widget>
+		<panel name="2RG-Bot-Source" />
+	</screen>
+</skin>

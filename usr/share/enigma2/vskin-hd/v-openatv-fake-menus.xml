@@ -1,0 +1,132 @@
+<skin>
+	<screen name="MenuIconsTemplate">
+	
+	        <!-- InfoPanel -->
+        	<widget source="menu" render="FixedLabel" text="SoftcamPanel" position="732,285" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">Infopanel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Softcam-Panel Setup" position="732,335" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">Infopanel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Software Manager" position="732,385" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">Infopanel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Keymap Selection" position="732,435" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">Infopanel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Plugins" position="732,485" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">Infopanel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Plugins" position="732,535" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">Infos</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	        
+		<!-- information menu -->
+		<widget source="menu" render="FixedLabel" text="About" position="732,285" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Devices" position="732,335" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Memory" position="732,385" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Network" position="732,435" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Service" position="732,485" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<!-- timers menu -->
+		<widget source="menu" render="FixedLabel" text="Timers" position="732,285" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">timer_menu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="PowerTimers" position="732,335" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">timer_menu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="CronTimers" position="732,385" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">timer_menu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="AutoTimers" position="732,435" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">timer_menu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<!-- setup menu -->
+		<widget source="menu" render="FixedLabel" text="Video" position="732,285" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Audio" position="732,335" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Recordings &amp; TImeshift" position="732,385" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Usage &amp; GUI" position="732,435" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="EPG" position="732,485" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Service searching" position="732,535" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Parental control" position="732,585" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Software management" position="732,635" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="System" position="732,685" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<!-- Standby / Restart -->
+		<widget source="menu" render="FixedLabel" text="Deep Standby" position="732,285" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Standby" position="732,335" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Sleep Timer" position="732,385" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Restart" position="732,435" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="FixedLabel" text="Restart Gui" position="732,485" font="Regular;28" size="536,50" valign="center" foregroundColor="white" backgroundColor="bgMid" alphatest="blend" transparent="1" itemHeight="50" zPosition="2">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+</skin>
+
+

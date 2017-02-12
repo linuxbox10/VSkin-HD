@@ -1,0 +1,279 @@
+
+<skin>
+        <!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/ChannelSelection.py -->
+
+         <!-- channel selection list -->
+	<screen name="ListTemplate">
+		<widget
+                name="list"
+                position="86,285"
+                size="795,370"
+                foregroundColor="white"
+                backgroundColor="bgDark"
+                foregroundColorSelected="white"
+                backgroundColorSelected="selectedBG"
+                foregroundColorEvent="textCol1"
+                foregroundColorEventSelected="textCol1"
+               	colorServiceDescription="textCol1"
+                colorServiceDescriptionSelected="vred"
+                foregroundColorEventborder="yellow"
+                foregroundColorEventborderSelected="green"
+                foregroundColorMarked="textCol1"
+                foregroundColorMarkedSelected="vred"
+                backgroundColorMarked="selectedBG"
+                backgroundColorMarkedSelected="highlightBG"
+                foregroundColorServiceNotAvail="verydarkgrey"
+                colorServiceRecorded="vred"
+                serviceItemHeight="40"
+                serviceNameFont="Regular;20"
+                serviceInfoFont="Regular;20"
+                serviceNumberFont="Regular;20"
+                picServiceEventProgressbar="v-progressbars/progress-50-6.png"
+                progressbarHeight="6"
+                progressbarBorderWidth="1"
+                progressBarWidth="50"
+                colorEventProgressbar="textCol1"
+                colorEventProgressbarSelected="textCol1"
+                colorEventProgressbarBorder="textCol2"
+                colorEventProgressbarBorderSelected="textCol2"
+                fieldMargins="20"
+                nonplayableMargins="20"
+                itemsDistances="10"
+                NumberOfRows="5"
+                transparent="1"
+                zPosition="4"
+                scrollbarMode="showOnDemand"
+                />	
+	</screen>
+	
+	<screen name="ChannelSelection" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+	        <panel name="v-epg-template1"/>
+                <ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1"/>
+
+  		<!-- event name -->
+		<widget source="ServiceEvent" render="Label" position="190,40" size="579,42" halign="left" valign="top" foregroundColor="white" backgroundColor="bgMid" font="Regular;36"  transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		
+		<!-- event start time -->
+		<widget source="ServiceEvent" render="Label" position="190,93" size="75,40" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" font="Regular;26" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M -</convert>
+		</widget>
+		
+		<!-- event End time -->
+		<widget source="ServiceEvent" render="Label" position="275,93" size="75,40" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" font="Regular;26" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		
+		<!-- event Duration -->
+		<widget source="ServiceEvent" render="Label" position="385,93" size="80,40" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" font="Regular;26" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">AsLengthHours</convert>
+		</widget>
+			
+		<!-- description -->
+		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap"
+                position="86,133" size="795,124" foregroundColor="white" backgroundColor="bgMid" font="Regular;20" transparent="1" valign="top" zPosition="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+	
+		
+		<!-- current picon -->
+		<widget source="Service" render="Picon" position="781,50" size="100,60" alphatest="blend" transparent="1" zPosition="2">
+			<convert type="ServiceName">Reference</convert>		
+		</widget>
+
+		<panel name="ListTemplate" />
+		
+		<!-- progress bar -->
+		<widget source="ServiceEvent" render="Progress" position="500,105" size="200,10" backgroundColor="bgDark" transparent="0" borderWidth="1" borderColor="textCol1" zPosition="5">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+
+                <!-- next program -->
+               	<widget source="ServiceEvent" render="Label" position="922,285" size="281,25" font="Regular;18" halign="left" valign="top" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="4">
+			<convert type="EventName">NextName</convert>
+		</widget>
+	
+		<widget source="ServiceEvent" render="Label" position="922,310" size="60,25"  font="Regular;16" noWrap="1" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" transparent="1" zPosition="4">
+			<convert type="EventTime">NextStartTime</convert>
+			<convert type="ClockToText">Format:%H.%M -</convert>
+		</widget>
+	
+		<widget source="ServiceEvent" render="Label" position="977,310" size="60,25" font="Regular;16" noWrap="1" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" transparent="1" zPosition="4">
+			<convert type="EventTime">NextEndTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+
+		<widget source="ServiceEvent" render="Label" position="922,335" size="281,268" font="Regular;16"  valign="top" transparent="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="4">
+			<convert type="EventName">NextDescription</convert>
+		</widget>
+
+		 <!-- later program -->
+		<widget source="ServiceEvent" render="Label" position="922,610" size="281,25" font="Regular;18" halign="left" valign="top" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="4">
+		        <convert type="EventName">ThirdName</convert>
+		</widget>
+
+		<widget source="ServiceEvent" render="Label" position="922,635" size="60,25"  font="Regular;16" noWrap="1" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" transparent="1" zPosition="4">
+			<convert type="EventTime">ThirdStartTime</convert>
+			<convert type="ClockToText">Format:%H.%M -</convert>
+		</widget>
+
+		<widget source="ServiceEvent"  render="Label" position="977,635" size="281,275" font="Regular;16"  valign="top" transparent="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="4">
+			<convert type="EventTime">ThirdEndTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+
+		<panel name="4RGYB-Bot" />
+                <ePixmap pixmap="v-buttons/key_menu.png" position="1163,668" size="38,30" transparent="1" alphatest="blend" zPosition="3" />
+                <ePixmap pixmap="v-buttons/key_info.png" position="1105,668" size="38,30" transparent="1" alphatest="blend" zPosition="3" />
+   	</screen>
+	
+	<!-- epgselection > menu > import from EPG -->
+	<screen name="SimpleChannelSelection" position="0,0" size="1280,720" backgroundColor="black" transparent="0" flags="wfNoBorder">
+                <panel name="v-epg-template1"/>
+                <ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+		<panel name="ListTemplate" />
+		<panel name="4RGYB-Bot" />
+	</screen>
+
+        <!--  alternative channel list service mode - available via context menu -->
+        <!-- not used in this skin - clone channelselect instead -->
+	<screen name="SlimChannelSelection" position="0,0" size="1280,720" backgroundColor="black" transparent="0" flags="wfNoBorder">
+                <panel name="ChannelSelection" />
+     	</screen>
+
+	<screen name="ChannelSelectionRadio" position="0,0" size="1280,720" backgroundColor="#000000" transparent="0" flags="wfNoBorder">
+	   <panel name="v-radio-template1"/>
+           <ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+
+  		<!-- event name -->
+		<widget source="ServiceEvent" render="Label" position="190,40" size="579,42" halign="left" valign="top" foregroundColor="white" backgroundColor="bgMid" font="Regular;36"  transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		
+		<!-- event start time -->
+		<widget source="ServiceEvent" render="Label" position="190,93" size="75,40" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" font="Regular;26" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M -</convert>
+		</widget>
+		
+		<!-- event End time -->
+		<widget source="ServiceEvent" render="Label" position="275,93" size="75,40" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" font="Regular;26" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		
+		<!-- event Duration -->
+		<widget source="ServiceEvent" render="Label" position="385,93" size="80,40" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" font="Regular;26" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">AsLengthHours</convert>
+		</widget>
+	
+		<!-- description -->
+		<widget source="ServiceEvent" render="Label" position="86,133" size="795,124" foregroundColor="white" backgroundColor="bgMid" font="Regular;20" transparent="1" valign="top" zPosition="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		
+		<!-- current picon -->
+		<widget source="Service" render="Picon" position="781,50" size="100,60" alphatest="blend" transparent="1" zPosition="2">
+			<convert type="ServiceName">Reference</convert>		
+		</widget>
+
+		<panel name="ListTemplate" />
+		
+		<!-- progress bar -->
+		<widget source="ServiceEvent" render="Progress" position="500,105" size="200,10" backgroundColor="bgDark" transparent="0" borderWidth="1" borderColor="textCol1" zPosition="5">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+
+                <!-- next program -->
+
+               	<widget source="ServiceEvent" render="Label" position="922,285" size="281,25" font="Regular;18" halign="left" valign="top" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="4">
+			<convert type="EventName">NextName</convert>
+		</widget>
+	
+		<widget source="ServiceEvent" render="Label" position="922,310" size="60,25"  font="Regular;16" noWrap="1" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" transparent="1" zPosition="4">
+			<convert type="EventTime">NextStartTime</convert>
+			<convert type="ClockToText">Format:%H.%M -</convert>
+		</widget>
+	
+		<widget source="ServiceEvent" render="Label" position="977,310" size="60,25" font="Regular;16" noWrap="1" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" transparent="1" zPosition="4">
+			<convert type="EventTime">NextEndTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+
+		<widget source="ServiceEvent" render="Label" position="922,335" size="281,268" font="Regular;16"  valign="top" transparent="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="4">
+			<convert type="EventName">NextDescription</convert>
+		</widget>
+
+		 <!-- later program -->
+		<widget source="ServiceEvent" render="Label" position="922,610" size="281,25" font="Regular;18" halign="left" valign="top" foregroundColor="white" backgroundColor="bgMid" transparent="1" zPosition="4">
+		        <convert type="EventName">ThirdName</convert>
+		</widget>
+
+		<widget source="ServiceEvent" render="Label" position="922,635" size="60,25"  font="Regular;16" noWrap="1" halign="left" valign="top" foregroundColor="textCol1" backgroundColor="bgMid" transparent="1" zPosition="4">
+			<convert type="EventTime">ThirdStartTime</convert>
+			<convert type="ClockToText">Format:%H.%M -</convert>
+		</widget>
+
+		<widget source="ServiceEvent"  render="Label" position="977,635" size="281,275" font="Regular;16"  valign="top" transparent="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="4">
+			<convert type="EventTime">ThirdEndTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+
+		<panel name="4RGYB-Bot" />
+                <ePixmap pixmap="v-buttons/key_menu.png" position="1163,668" size="38,30" transparent="1" alphatest="blend" zPosition="3" />
+                <ePixmap pixmap="v-buttons/key_info.png" position="1105,668" size="38,30" transparent="1" alphatest="blend" zPosition="3" />
+	</screen>
+
+	<!-- channel select menu -->
+	<screen name="ChannelContextMenu" position="0,0" size="1280,720" backgroundColor="transparent" transparent="0" flags="wfNoBorder">
+		   <panel name="v-epg-template1"/>
+		     <ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+
+		<widget name="menu"   position="86,285" size="795,390" scrollbarMode="showNever" itemHeight="30" transparent="1" zPosition="3" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png"  alphatest="blend" position="0,e-55" size="1280,54" zPosition="10" />
+         </screen>
+
+	<screen name="HistoryZapSelector" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <ePixmap pixmap="v-backgrounds/left-slim-bg.png" position="0,e-611" size="464,611" alphatest="blend" zPosition="-1" />
+		<widget source="Title" render="Label" position="40,143" size="340,38" valign="top" halign="left" font="Regular;26" zPosition="1" transparent="1" foregroundColor="textCol1" backgroundColor="messageBG" />
+		<widget source="menu" render="Listbox" position="0,188" size="455,550" scrollbarMode="showNever"
+                selectionPixmap="v-selectbars/selectbar-70-455-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" backgroundColorSelected="seledtedBG"
+                transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (20, 6), size = (10, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
+						MultiContentEntryText(pos = (40, 4), size = (260, 30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff), # Servicename
+						MultiContentEntryText(pos = (40, 27), size = (260, 26), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 3, color = 0x00b58aa6, color_sel = 0x00b58aa6), # Eventname
+						MultiContentEntryText(pos = (40, 47), size = (260, 20), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = 0x00999999, color_sel = 0x00999999), # Eventtime
+						MultiContentEntryPixmapAlphaBlend(pos=(310, 5), size=(100, 60), png=6, flags = BT_SCALE) # picon
+					],
+				 "fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
+				 "itemHeight": 70
+				}
+			</convert>
+		</widget>
+		   <ePixmap pixmap="v-backgrounds/slim-gradient.png" position="0,e-54" size="441,54" alphatest="blend" zPosition="5" />
+	</screen>
+	
+	<screen name="RecordTimerQuestion" position="center,center" size="240,80" zPosition="99" flags="wfNoBorder" backgroundColor="transparent">
+                <eLabel position="0,0" size="240,80" backgroundColor="textCol1" zPosition="-2" transparent="0" />
+               	<eLabel position="2,2" size="236,76" backgroundColor="messageBG" zPosition="-1" transparent="0" />
+		<widget name="list" position="10,10" size="220,60" itemHeight="30" font="Regular;18" scrollbarMode="showOnDemand" enableWrapAround="1"
+                backgroundColorSelected="seledtedBG" foregroundColorSelected="white" backgroundColor="messageBG" foregroundColor="white" transparent="1" />
+    	</screen>
+
+	<!-- ?? -->
+	<screen name="RemoveTimerQuestion" position="center,center" size="503,130" zPosition="5" flags="wfNoBorder">
+		<widget name="text" position="0,0" size="0,0" font="Regular;22"/>
+		<widget name="list" position="10,10" size="220,50" enableWrapAround="1"/>
+		<applet type="onLayoutFinish">
+self.autoResize()
+		</applet>
+	</screen>
+	
+</skin>

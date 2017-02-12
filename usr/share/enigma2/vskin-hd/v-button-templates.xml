@@ -1,0 +1,412 @@
+<skin>
+	<screen name="red-button-icon">
+		<ePixmap pixmap="v-buttons/key_red.png" position="0,0" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+	
+	<screen name="green-button-icon">
+		<ePixmap pixmap="v-buttons/key_green.png" position="0,0" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+	
+	<screen name="yellow-button-icon">
+		<ePixmap pixmap="v-buttons/key_yellow.png" position="0,0" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+	
+	<screen name="blue-button-icon">
+		<ePixmap pixmap="v-buttons/key_blue.png" position="0,0" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+	
+	<!-- widget buttons -->
+	<screen name="red-button-widget">
+	
+		<widget name="red" pixmap="v-buttons/key_red.png" position="0,0" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+	
+	<screen name="green-button-widget">
+		<widget name="green" pixmap="v-buttons/key_green.png" position="0,0" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+	
+	<screen name="yellow-button-widget">
+		<widget name="yellow" pixmap="v-buttons/key_yellow.png" position="0,0" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+	
+	<screen name="blue-button-widget">
+		<widget name="blue" pixmap="v-buttons/key_blue.png" position="0,0" size="30,30" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+	
+
+	<!-- 4 buttons red/green/blue/yellow -->
+	<screen name="R-Button">
+		<panel name="red-button-icon" />
+		<widget name="key_red" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="G-Button">
+		<panel name="green-button-icon" />
+		<widget name="key_green" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="Y-Button">
+		<panel name="yellow-button-icon" />
+		<widget name="key_yellow" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="B-Button">
+		<panel name="blue-button-icon" />
+		<widget name="key_blue" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<!-- grey text buttons -->
+	<screen name="R-Button-grey">
+		<panel name="red-button-icon" />
+		<widget name="key_red" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="G-Button-grey">
+		<panel name="green-button-icon" />
+		<widget name="key_green" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="Y-Button-grey">
+		<panel name="yellow-button-icon" />
+		<widget name="key_yellow" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="B-Button-grey">
+		<panel name="blue-button-icon" />
+		<widget name="key_blue" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<!--widget buttons -->
+	<screen name="R-widget">
+		<panel name="red-button-widget" />
+		<widget name="key_red" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="G-widget">
+		<panel name="green-button-widget" />
+		<widget name="key_green" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="Y-widget">
+		<panel name="yellow-button-widget" />
+		<widget name="key_yellow" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="B-widget">
+		<panel name="blue-button-widget" />
+		<widget name="key_blue" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="R-widget-grey">
+		<panel name="red-button-widget" />
+		<widget name="key_red" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="G-widget-grey">
+		<panel name="green-button-widget" />
+		<widget name="key_green" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="Y-widget-grey">
+		<panel name="yellow-button-widget" />
+		<widget name="key_yellow" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="B-widget-grey">
+		<panel name="blue-button-widget" />
+		<widget name="key_blue" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+
+	<screen name="4RGYB-Top">
+		<panel position="200,240" size="0,30">
+			<panel name="R-Button" />
+		</panel>
+		<panel position="374,240" size="0,30">
+			<panel name="G-Button" />
+		</panel>
+		<panel position="548,240" size="0,30">
+			<panel name="Y-Button" />
+		</panel>
+		<panel position="722,240" size="0,30">
+			<panel name="B-Button" />
+		</panel>
+	</screen>
+	
+	<!-- 3 buttons red/green/yellow -->
+	<screen name="3RGY-Top">
+		<panel position="374,240" size="0,30">
+			<panel name="R-Button" />
+		</panel>
+		<panel position="548,240" size="0,30">
+			<panel name="G-Button" />
+		</panel>
+		<panel position="722,240" size="0,30">
+			<panel name="Y-Button" />
+		</panel>
+	</screen>
+	
+	<!-- 2 buttons red/green-->
+	<screen name="2RG-Top">
+		<panel position="548,240" size="0,30">
+			<panel name="R-Button" />
+		</panel>
+		<panel position="722,240" size="0,30">
+			<panel name="G-Button" />
+		</panel>
+	</screen>
+	
+	<!-- source buttons -->
+	<screen name="R-Source">
+		<panel name="red-button-icon" />
+		<widget source="key_red" render="Label" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="G-Source">
+		<panel name="green-button-icon" />
+		<widget source="key_green" render="Label" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="Y-Source">
+		<panel name="yellow-button-icon" />
+		<widget source="key_yellow" render="Label" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="B-Source">
+		<panel name="blue-button-icon" />
+		<widget source="key_blue" render="Label" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol1" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<!-- grey text buttons -->
+	<screen name="R-Source-grey">
+		<panel name="red-button-icon" />
+		<widget source="key_red" render="Label" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+
+	
+	<screen name="G-Source-grey">
+		<panel name="green-button-icon" />
+		<widget source="key_green" render="Label" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="Y-Source-grey">
+		<panel name="yellow-button-icon" />
+		<widget source="key_yellow" render="Label" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+	
+	<screen name="B-Source-grey">
+		<panel name="blue-button-icon" />
+		<widget source="key_blue" render="Label" position="30,0" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="textCol2" backgroundColor="bgMid" zPosition="2" />
+	</screen>
+
+	<!-- 4 buttons red/green/blue/yellow -->
+	<screen name="4RGYB-Top-Source">
+		<panel position="200,240" size="0,30">
+			<panel name="R-Source" />
+		</panel>
+		<panel position="374,240" size="0,30">
+			<panel name="G-Source" />
+		</panel>
+		<panel position="548,240" size="0,30">
+			<panel name="Y-Source" />
+		</panel>
+		<panel position="722,240" size="0,30">
+			<panel name="B-Source" />
+		</panel>
+	</screen>
+	
+	<!-- 3 buttons red/green/yellow -->
+	<screen name="3RGY-Top-Source">
+		<panel position="374,240" size="0,30">
+			<panel name="R-Source" />
+		</panel>
+		<panel position="548,240" size="0,30">
+			<panel name="G-Source" />
+		</panel>
+		<panel position="722,240" size="0,30">
+			<panel name="Y-Source" />
+		</panel>
+	</screen>
+	
+	<!-- 2 buttons red/green-->
+	<screen name="2RG-Top-Source">
+		<panel position="548,240" size="0,30">
+			<panel name="R-Source" />
+		</panel>
+		<panel position="722,240" size="0,30">
+			<panel name="G-Source" />
+		</panel>
+	</screen>
+	
+	
+	<!-- setup buttons -->
+	<screen name="setup-buttons">
+		<panel position="693,240" size="0,30">
+			<panel name="R-Source" />
+		</panel>
+		<panel position="797,240" size="0,30">
+			<panel name="G-Source" />
+		</panel>
+	</screen>
+	
+	<screen name="LED-setup-buttons">
+		<panel position="481,240" size="0,30">
+			<panel name="R-Button" />
+		</panel>
+		<panel position="585,240" size="0,30">
+			<panel name="G-Button" />
+		</panel>
+		<panel position="672,240" size="0,30">
+			<panel name="Y-Button" />
+		</panel>
+	</screen>
+	
+	<!-- bottom buttons -->
+	<screen name="4RGYB-Bot">
+		<panel position="86,668" size="0,30">
+			<panel name="R-Button-grey" />
+		</panel>
+		<panel position="286,668" size="0,30">
+			<panel name="G-Button-grey" />
+		</panel>
+		<panel position="486,668" size="0,30">
+			<panel name="Y-Button-grey" />
+		</panel>
+		<panel position="686,668" size="0,30">
+			<panel name="B-Button-grey" />
+		</panel>
+	</screen>
+	
+	<screen name="3RGY-Bot">
+		<panel position="86,668" size="0,30">
+			<panel name="R-Button-grey" />
+		</panel>
+		<panel position="286,668" size="0,30">
+			<panel name="G-Button-grey" />
+		</panel>
+		<panel position="486,668" size="0,30">
+			<panel name="Y-Button-grey" />
+		</panel>
+	</screen>
+	
+	<screen name="2RG-Bot">
+		<panel position="86,668" size="0,30">
+			<panel name="R-Button-grey" />
+		</panel>
+		<panel position="286,668" size="0,30">
+			<panel name="G-Button-grey" />
+		</panel>
+	</screen>
+	
+	<screen name="1R-Bot">
+		<panel position="86,668" size="0,30">
+			<panel name="R-Button-grey" />
+		</panel>
+	
+	</screen>
+	
+	<!-- bottom source buttons -->
+	<screen name="4RGYB-Bot-Source">
+		<panel position="86,668" size="0,30">
+			<panel name="R-Source-grey" />
+		</panel>
+		<panel position="286,668" size="0,30">
+			<panel name="G-Source-grey" />
+		</panel>
+		<panel position="486,668" size="0,30">
+			<panel name="Y-Source-grey" />
+		</panel>
+		<panel position="686,668" size="0,30">
+			<panel name="B-Source-grey" />
+		</panel>
+	</screen>
+	
+	<screen name="3RGY-Bot-Source">
+		<panel position="86,668" size="0,30">
+			<panel name="R-Source-grey" />
+		</panel>
+		<panel position="286,668" size="0,30">
+			<panel name="G-Source-grey" />
+		</panel>
+		<panel position="486,668" size="0,30">
+			<panel name="Y-Source-grey" />
+		</panel>
+	</screen>
+	
+	<screen name="2RG-Bot-Source">
+		<panel position="86,668" size="0,30">
+			<panel name="R-Source-grey" />
+		</panel>
+		<panel position="286,668" size="0,30">
+			<panel name="G-Source-grey" />
+		</panel>
+	</screen>
+	
+	<screen name="1R-Bot-Source">
+		<panel position="86,668" size="0,30">
+			<panel name="R-Source-grey" />
+		</panel>
+	
+	</screen>
+	
+	<screen name="1G-Bot-Source">
+		<panel position="286,668" size="0,30">
+			<panel name="G-Source-grey" />
+		</panel>
+	
+	</screen>
+	
+	<screen name="1Y-Bot-Source">
+		<panel position="486,668" size="0,30">
+			<panel name="Y-Source-grey" />
+		</panel>
+	
+	</screen>
+	
+	<screen name="1B-Bot-Source">
+		<panel position="686,668" size="0,30">
+			<panel name="B-Source-grey" />
+		</panel>
+	
+	</screen>
+	
+	<!-- popup message box buttons bottom -->
+	<screen name="4RGYB-Mess-Bot-Source">
+		<panel position="0,e-30" size="0,30">
+			<panel name="R-Source-grey" />
+		</panel>
+		<panel position="140,e-30" size="0,30">
+			<panel name="G-Source-grey" />
+		</panel>
+		<panel position="280,e-30" size="0,30">
+			<panel name="Y-Source-grey" />
+		</panel>
+		<panel position="420,e-30" size="0,30">
+			<panel name="B-Source-grey" />
+		</panel>
+	</screen>
+
+	<!-- 2 buttons red/green widget -->
+	<screen name="2RG-Top-Widget">
+		<panel position="548,240" size="0,30">
+			<panel name="R-widget" />
+		</panel>
+		<panel position="722,240" size="0,30">
+			<panel name="G-widget" />
+		</panel>
+	</screen>
+	
+	<screen name="4RGYB-Bot-Widget">
+		<panel position="86,668" size="0,30">
+			<panel name="R-widget" />
+		</panel>
+		<panel position="286,668" size="0,30">
+			<panel name="G-widget" />
+		</panel>
+		<panel position="486,668" size="0,30">
+			<panel name="Y-widget" />
+		</panel>
+		<panel position="686,668" size="0,30">
+			<panel name="B-widget" />
+		</panel>
+	</screen>
+</skin>
